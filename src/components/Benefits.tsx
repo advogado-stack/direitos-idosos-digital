@@ -1,54 +1,54 @@
-import { Scale, Heart, FileCheck, Users } from "lucide-react";
+import { Shield, Heart, Clock, CheckCircle2 } from "lucide-react";
 
 const benefits = [
   {
-    icon: Scale,
-    title: "Experiência Comprovada",
-    description: "Anos de atuação exclusiva em direito previdenciário, com foco em BPC/LOAS para idosos."
-  },
-  {
     icon: Heart,
     title: "Atendimento Humanizado",
-    description: "Compreendemos as necessidades do público idoso e oferecemos suporte acolhedor em cada etapa."
+    description: "Entendemos suas necessidades. Explicamos tudo de forma simples e clara."
   },
   {
-    icon: FileCheck,
-    title: "Assessoria Completa",
-    description: "Desde a análise inicial até a concessão do benefício, cuidamos de toda a documentação e processo."
+    icon: Shield,
+    title: "Experiência e Confiança",
+    description: "Especialistas em benefícios para idosos. Cuidamos de todo o processo para você."
   },
   {
-    icon: Users,
-    title: "Sem Burocracia",
-    description: "Simplificamos todo o processo para que você foque apenas em receber seu benefício."
+    icon: Clock,
+    title: "Rápido e Sem Burocracia",
+    description: "Agilizamos seu pedido. Você não precisa se preocupar com papelada."
+  },
+  {
+    icon: CheckCircle2,
+    title: "Do Começo ao Fim",
+    description: "Acompanhamos você em todas as etapas até receber seu benefício."
   }
 ];
 
 const Benefits = () => {
   return (
     <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Por que escolher nossa assessoria?
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            Trabalhamos com dedicação e transparência para garantir que você receba o benefício que merece.
+          <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed max-w-3xl mx-auto">
+            Facilitamos tudo para você conquistar seu direito
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
             <div 
-              key={index}
-              className="bg-card rounded-xl p-8 border border-border shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
+              key={index} 
+              className="bg-card p-8 rounded-lg shadow-lg border border-border hover:shadow-xl transition-shadow"
             >
-              <div className="bg-primary/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                <benefit.icon className="h-8 w-8 text-primary" />
+              <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-6 mx-auto">
+                <benefit.icon className="h-8 w-8 text-accent" />
               </div>
-              <h3 className="text-2xl font-semibold mb-4 text-foreground">
+              <h3 className="text-2xl font-bold mb-4 text-center">
                 {benefit.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed text-lg">
+              <p className="text-xl text-foreground/80 text-center leading-relaxed">
                 {benefit.description}
               </p>
             </div>

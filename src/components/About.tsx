@@ -1,53 +1,56 @@
-import { CheckCircle2 } from "lucide-react";
+import { Check } from "lucide-react";
 
 const About = () => {
   return (
     <section className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
             O que é o BPC/LOAS?
           </h2>
-          <p className="text-xl text-center text-muted-foreground mb-12 leading-relaxed">
-            O Benefício de Prestação Continuada (BPC/LOAS) é um direito garantido pela Constituição Federal que assegura um salário mínimo mensal a idosos e pessoas com deficiência de baixa renda.
+          <p className="text-xl md:text-2xl text-foreground/80 mb-10 text-center leading-relaxed">
+            É um benefício do governo que paga <strong>um salário mínimo por mês</strong> para pessoas idosas com baixa renda.
           </p>
           
-          <div className="bg-card rounded-2xl shadow-lg p-8 md:p-12 border border-border">
-            <h3 className="text-2xl md:text-3xl font-semibold mb-8 text-foreground">
-              Quem tem direito ao benefício?
+          <div className="bg-card rounded-lg p-8 md:p-10 shadow-lg border-2 border-border">
+            <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+              Você tem direito se:
             </h3>
-            
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <CheckCircle2 className="h-7 w-7 text-secondary flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="text-xl font-semibold mb-2 text-foreground">Idosos com 65 anos ou mais</h4>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Que não possuam meios de prover a própria manutenção nem tê-la provida por sua família.
-                  </p>
+              <div className="flex gap-4 items-start">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
+                  <Check className="h-6 w-6 text-accent" />
                 </div>
+                <p className="text-xl md:text-2xl leading-relaxed">
+                  Tem <strong>65 anos ou mais</strong>
+                </p>
               </div>
               
-              <div className="flex items-start gap-4">
-                <CheckCircle2 className="h-7 w-7 text-secondary flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="text-xl font-semibold mb-2 text-foreground">Renda familiar per capita</h4>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Inferior a 1/4 do salário mínimo vigente (critério legal, mas pode ser contestado judicialmente).
-                  </p>
+              <div className="flex gap-4 items-start">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
+                  <Check className="h-6 w-6 text-accent" />
                 </div>
+                <p className="text-xl md:text-2xl leading-relaxed">
+                  A renda da sua família é baixa (menos de 1/4 do salário mínimo por pessoa)
+                </p>
               </div>
               
-              <div className="flex items-start gap-4">
-                <CheckCircle2 className="h-7 w-7 text-secondary flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="text-xl font-semibold mb-2 text-foreground">Não recebe nenhum benefício previdenciário</h4>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Não pode estar recebendo outro benefício no âmbito da Seguridade Social ou de outro regime.
-                  </p>
+              <div className="flex gap-4 items-start">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
+                  <Check className="h-6 w-6 text-accent" />
                 </div>
+                <p className="text-xl md:text-2xl leading-relaxed">
+                  Não recebe outro benefício do INSS
+                </p>
               </div>
             </div>
+          </div>
+
+          <div className="mt-10 text-center">
+            <p className="text-xl md:text-2xl text-foreground/70 leading-relaxed">
+              <strong>Não precisa ter contribuído para o INSS.</strong><br />
+              É um direito seu garantido por lei.
+            </p>
           </div>
         </div>
       </div>

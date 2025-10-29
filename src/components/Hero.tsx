@@ -1,49 +1,46 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MessageCircle } from "lucide-react";
-import heroImage from "@/assets/hero-lawyer.jpg";
+import { MessageCircle } from "lucide-react";
+import heroImage from "@/assets/elderly-hero.jpg";
 
 const Hero = () => {
-  const whatsappNumber = "5511999999999"; // Número de exemplo
-  const whatsappMessage = encodeURIComponent("Olá! Gostaria de saber mais sobre o BPC/LOAS.");
+  const whatsappNumber = "5511999999999";
+  const whatsappMessage = encodeURIComponent("Olá! Tenho mais de 65 anos e gostaria de saber sobre o BPC/LOAS.");
 
   return (
-    <section className="relative min-h-[90vh] flex items-center">
+    <section className="relative min-h-[85vh] flex items-center bg-background">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/70 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80 z-10" />
         <img 
           src={heroImage} 
-          alt="Advogado especialista em BPC/LOAS" 
-          className="w-full h-full object-cover"
+          alt="Pessoa idosa sorrindo com confiança" 
+          className="w-full h-full object-cover opacity-30"
         />
       </div>
       
-      <div className="container mx-auto px-4 py-20 relative z-20">
-        <div className="max-w-3xl">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-            Conquiste o Benefício que Você Merece
+      <div className="container mx-auto px-6 py-16 relative z-20">
+        <div className="max-w-4xl">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+            BPC/LOAS: Um Salário Mínimo por Mês para Você
           </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/95 mb-8 leading-relaxed">
-            Especialista em BPC/LOAS para idosos. Assessoria completa e humanizada para garantir seus direitos previdenciários.
+          <p className="text-2xl md:text-3xl text-foreground/90 mb-4 leading-relaxed font-medium">
+            Tem 65 anos ou mais?
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <p className="text-xl md:text-2xl text-foreground/80 mb-10 leading-relaxed">
+            Você pode ter direito a receber um salário mínimo todo mês. Nós ajudamos você a conseguir esse benefício.
+          </p>
+          <div className="flex flex-col gap-5">
             <Button 
               size="lg" 
               variant="secondary"
-              className="text-lg px-8 py-6 shadow-lg hover:scale-105 transition-transform"
+              className="text-2xl md:text-3xl px-10 py-8 h-auto font-bold shadow-xl hover:scale-105 transition-transform"
               onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank')}
             >
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Fale pelo WhatsApp
+              <MessageCircle className="mr-3 h-8 w-8" />
+              Falar no WhatsApp Agora
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="text-lg px-8 py-6 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-primary"
-              onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              <Phone className="mr-2 h-5 w-5" />
-              Agendar Consulta
-            </Button>
+            <p className="text-lg text-foreground/70 text-center">
+              Atendimento rápido e sem complicação
+            </p>
           </div>
         </div>
       </div>
